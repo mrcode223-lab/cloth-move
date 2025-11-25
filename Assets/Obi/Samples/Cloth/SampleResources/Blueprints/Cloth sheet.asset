@@ -1,0 +1,391 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2367c7fda2ffe4e84a808aa9e3662723, type: 3}
+  m_Name: Cloth sheet
+  m_EditorClassIdentifier: 
+  m_Empty: 0
+  m_ActiveParticleCount: 4
+  m_InitialActiveParticleCount: 4
+  _bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 3.0616168e-17}
+  positions:
+  - {x: -0.5, y: -0.5, z: -3.0616168e-17}
+  - {x: 0.5, y: -0.5, z: -3.0616168e-17}
+  - {x: -0.5, y: 0.5, z: 3.0616168e-17}
+  - {x: 0.5, y: 0.5, z: 3.0616168e-17}
+  restPositions:
+  - {x: -0.5, y: -0.5, z: -3.0616168e-17, w: 1}
+  - {x: 0.5, y: -0.5, z: -3.0616168e-17, w: 1}
+  - {x: -0.5, y: 0.5, z: 3.0616168e-17, w: 1}
+  - {x: 0.5, y: 0.5, z: 3.0616168e-17, w: 1}
+  orientations: []
+  restOrientations: []
+  velocities:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  angularVelocities: []
+  invMasses:
+  - 29.999998
+  - 59.999996
+  - 59.999996
+  - 29.999998
+  invRotationalMasses: []
+  filters: 0200ffff0200ffff0200ffff0200ffff
+  principalRadii:
+  - {x: 0.5, y: 0.5, z: 0.5}
+  - {x: 0.5, y: 0.5, z: 0.5}
+  - {x: 0.5, y: 0.5, z: 0.5}
+  - {x: 0.5, y: 0.5, z: 0.5}
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  points: 
+  edges: 
+  triangles: 000000000300000001000000030000000000000002000000
+  distanceConstraintsData:
+    batches:
+    - m_IDs: 0000000001000000
+      m_IDToIndex: 0000000001000000
+      m_ConstraintCount: 2
+      m_ActiveConstraintCount: 2
+      m_InitialActiveConstraintCount: 2
+      particleIndices:
+        serializedContents: 01000000000000000200000003000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restLengths:
+        serializedContents:
+        - 1
+        - 1
+        m_AlignBytes: 16
+      stiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+    - m_IDs: 00000000
+      m_IDToIndex: 00000000
+      m_ConstraintCount: 1
+      m_ActiveConstraintCount: 1
+      m_InitialActiveConstraintCount: 1
+      particleIndices:
+        serializedContents: 0000000003000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restLengths:
+        serializedContents:
+        - 1.4142135
+        m_AlignBytes: 16
+      stiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+    - m_IDs: 0000000001000000
+      m_IDToIndex: 0000000001000000
+      m_ConstraintCount: 2
+      m_ActiveConstraintCount: 2
+      m_InitialActiveConstraintCount: 2
+      particleIndices:
+        serializedContents: 03000000010000000000000002000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restLengths:
+        serializedContents:
+        - 1
+        - 1
+        m_AlignBytes: 16
+      stiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+  bendConstraintsData:
+    batches:
+    - m_IDs: 00000000
+      m_IDToIndex: 00000000
+      m_ConstraintCount: 1
+      m_ActiveConstraintCount: 1
+      m_InitialActiveConstraintCount: 1
+      particleIndices:
+        serializedContents: 010000000100000000000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restBends:
+        serializedContents:
+        - 0.6666667
+        m_AlignBytes: 16
+      bendingStiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+      plasticity:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+    - m_IDs: 00000000
+      m_IDToIndex: 00000000
+      m_ConstraintCount: 1
+      m_ActiveConstraintCount: 1
+      m_InitialActiveConstraintCount: 1
+      particleIndices:
+        serializedContents: 030000000300000000000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restBends:
+        serializedContents:
+        - 0.94280905
+        m_AlignBytes: 16
+      bendingStiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+      plasticity:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+    - m_IDs: 00000000
+      m_IDToIndex: 00000000
+      m_ConstraintCount: 1
+      m_ActiveConstraintCount: 1
+      m_InitialActiveConstraintCount: 1
+      particleIndices:
+        serializedContents: 020000000200000000000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restBends:
+        serializedContents:
+        - 0.6666667
+        m_AlignBytes: 16
+      bendingStiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+      plasticity:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+    - m_IDs: 00000000
+      m_IDToIndex: 00000000
+      m_ConstraintCount: 1
+      m_ActiveConstraintCount: 1
+      m_InitialActiveConstraintCount: 1
+      particleIndices:
+        serializedContents: 000000000000000001000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      restBends:
+        serializedContents:
+        - 0.6666667
+        m_AlignBytes: 16
+      bendingStiffnesses:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+      plasticity:
+        serializedContents:
+        - {x: 0, y: 0}
+        m_AlignBytes: 16
+  skinConstraintsData:
+    batches: []
+  tetherConstraintsData:
+    batches: []
+  stretchShearConstraintsData:
+    batches: []
+  bendTwistConstraintsData:
+    batches: []
+  shapeMatchingConstraintsData:
+    batches: []
+  aerodynamicConstraintsData:
+    batches:
+    - m_IDs: 00000000010000000200000003000000
+      m_IDToIndex: 00000000010000000200000003000000
+      m_ConstraintCount: 4
+      m_ActiveConstraintCount: 4
+      m_InitialActiveConstraintCount: 4
+      particleIndices:
+        serializedContents: 00000000010000000200000003000000
+        m_AlignBytes: 16
+      lambdas:
+        serializedContents: []
+        m_AlignBytes: 16
+      aerodynamicCoeffs:
+        serializedContents:
+        - 0.33333334
+        - 1
+        - 1
+        - 0.16666667
+        - 1
+        - 1
+        - 0.16666667
+        - 1
+        - 1
+        - 0.33333334
+        - 1
+        - 1
+        m_AlignBytes: 16
+  chainConstraintsData:
+    batches: []
+  volumeConstraintsData:
+    batches: []
+  groups: []
+  inputMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  scale: {x: 1, y: 1, z: 1}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  topology:
+    inputMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+    scale: {x: 1, y: 1, z: 1}
+    containsData: 1
+    vertices:
+    - index: 0
+      halfEdge: 6
+      position: {x: -0.5, y: -0.5, z: -3.0616168e-17}
+    - index: 1
+      halfEdge: 7
+      position: {x: 0.5, y: -0.5, z: -3.0616168e-17}
+    - index: 2
+      halfEdge: 9
+      position: {x: -0.5, y: 0.5, z: 3.0616168e-17}
+    - index: 3
+      halfEdge: 8
+      position: {x: 0.5, y: 0.5, z: 3.0616168e-17}
+    halfEdges:
+    - index: 0
+      indexInFace: 0
+      face: 0
+      nextHalfEdge: 1
+      pair: 6
+      endVertex: 0
+    - index: 1
+      indexInFace: 1
+      face: 0
+      nextHalfEdge: 2
+      pair: 4
+      endVertex: 3
+    - index: 2
+      indexInFace: 2
+      face: 0
+      nextHalfEdge: 0
+      pair: 7
+      endVertex: 1
+    - index: 3
+      indexInFace: 0
+      face: 1
+      nextHalfEdge: 4
+      pair: 8
+      endVertex: 3
+    - index: 4
+      indexInFace: 1
+      face: 1
+      nextHalfEdge: 5
+      pair: 1
+      endVertex: 0
+    - index: 5
+      indexInFace: 2
+      face: 1
+      nextHalfEdge: 3
+      pair: 9
+      endVertex: 2
+    - index: 6
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 7
+      pair: 0
+      endVertex: 1
+    - index: 7
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 8
+      pair: 2
+      endVertex: 3
+    - index: 8
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 9
+      pair: 3
+      endVertex: 2
+    - index: 9
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 6
+      pair: 5
+      endVertex: 0
+    borderEdges:
+    - index: 6
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 0
+      pair: 0
+      endVertex: 1
+    - index: 7
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 0
+      pair: 2
+      endVertex: 3
+    - index: 8
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 0
+      pair: 3
+      endVertex: 2
+    - index: 9
+      indexInFace: -1
+      face: -1
+      nextHalfEdge: 0
+      pair: 5
+      endVertex: 0
+    faces:
+    - index: 0
+      halfEdge: 0
+    - index: 1
+      halfEdge: 3
+    restNormals:
+    - {x: 0, y: 1.2246467e-16, z: -2}
+    - {x: 0, y: 6.1232336e-17, z: -1}
+    - {x: 0, y: 6.1232336e-17, z: -1}
+    - {x: 0, y: 1.2246467e-16, z: -2}
+    restOrientations:
+    - {x: -0.7071068, y: -0.7071068, z: -2.1648902e-17, w: -2.1648902e-17}
+    - {x: -0, y: -1, z: -3.0616168e-17, w: 0}
+    - {x: -1, y: -0, z: -0, w: -3.0616168e-17}
+    - {x: -0.7071068, y: 0.7071068, z: 2.1648902e-17, w: -2.1648902e-17}
+    rawToWelded: 00000000010000000200000003000000
+  deformableTriangles: 000000000300000001000000030000000000000002000000
+  restNormals:
+  - {x: 0, y: 6.1232336e-17, z: -1}
+  - {x: 0, y: 6.1232336e-17, z: -1}
+  - {x: 0, y: 6.1232336e-17, z: -1}
+  - {x: 0, y: 6.1232336e-17, z: -1}
+  areaContribution:
+  - 0.33333334
+  - 0.16666667
+  - 0.16666667
+  - 0.33333334
