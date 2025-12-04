@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class DragByRaycast : MonoBehaviour
 {
@@ -6,8 +8,11 @@ public class DragByRaycast : MonoBehaviour
     public LayerMask pickableLayer;
 
     [Header("Limit Settings")]
-    public Transform centerPoint;    // điểm center để giới hạn
-    public float maxDistance = 3f;   // khoảng cách tối đa cho phép
+    public Transform centerPoint;
+    public float maxDistance = 3f;
+
+    [Header("Hands (drag objects)")]
+    public List<Transform> handObjects = new List<Transform>();
 
     private Camera cam;
     private Transform selectedObj;
@@ -21,44 +26,93 @@ public class DragByRaycast : MonoBehaviour
 
     void Update()
     {
-        // Bắt object khi click
+        HandlePickDrag();
+          // 👈 NEW — Luôn giới hạn tất cả hand trong frame
+    }
+    private void FixedUpdate()
+    {
+        //ClampAllHands();
+    }
+    void HandlePickDrag()
+    {
+        // Pick
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 1000f, pickableLayer))
             {
-                selectedObj = hit.transform;
-                dragDistance = Vector3.Distance(cam.transform.position, hit.point);
-                offset = selectedObj.position - hit.point;
+                if (handObjects.Contains(hit.transform))
+                {
+                    selectedObj = hit.transform;
+                    dragDistance = Vector3.Distance(cam.transform.position, hit.point);
+                    offset = selectedObj.position - hit.point;
+                }
             }
         }
 
-        // Move object theo chuột
+        // Drag
         if (Input.GetMouseButton(0) && selectedObj != null)
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             Vector3 targetPos = ray.GetPoint(dragDistance) + offset;
 
-            // --- Clamp khoảng cách ---
-            if (centerPoint != null)
+            selectedObj.position = new Vector3(targetPos.x, targetPos.y, selectedObj.position.z);
+            selectedObj.GetComponent<Rigidbody>().isKinematic = true;
+
+            var dist = Vector2.Distance(selectedObj.position, centerPoint.position);
+            if (dist >= maxDistance)
             {
-                Vector3 dir = targetPos - centerPoint.position;
-                float dist = dir.magnitude;
-
-                if (dist > maxDistance)
-                {
-                    // clamp lại vị trí
-                    targetPos = centerPoint.position + dir.normalized * maxDistance;
-                }
+                selectedObj.GetComponent<Rigidbody>().isKinematic = false;
+                selectedObj = null;
+                return;
             }
-
-            selectedObj.position = targetPos;
         }
 
-        // Thả chuột
+        // Release
         if (Input.GetMouseButtonUp(0))
         {
+            if (selectedObj != null)
+            {
+                var dist = Vector2.Distance(selectedObj.position, centerPoint.position);
+                if (dist >= maxDistance)
+                {
+                    selectedObj.GetComponent<Rigidbody>().isKinematic = false;
+                    return;
+                } 
+                    
+                var hand = selectedObj.GetComponent<HandObject>();
+                if (hand != null)
+                    hand.CheckAttachToWall();
+            }
             selectedObj = null;
+        }
+    }
+
+    /// <summary>
+    /// Luôn giữ hand trong phạm vi maxDistance, kể cả khi không drag
+    /// </summary>
+    void ClampAllHands()
+    {
+        foreach (Transform hand in handObjects)
+        {
+            if (hand == null) continue;
+
+            Vector3 pos = hand.position;
+
+            // Lock Z
+            pos.z = 0;
+
+            // Vector từ center đến hand
+            Vector3 dir = pos - centerPoint.position;
+            float dist = dir.magnitude;
+
+            // Nếu vượt quá phạm vi → kéo lại
+            if (dist > maxDistance)
+            {
+                pos = centerPoint.position + dir.normalized * maxDistance;
+            }
+
+            hand.position = Vector3.Slerp(hand.position, pos, Time.fixedDeltaTime * 10);
         }
     }
 }
