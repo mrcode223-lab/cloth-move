@@ -16,7 +16,16 @@ public class SkinSlot : MonoBehaviour
         buttonSelect.onClick.AddListener(OnSelectClicked);
         buttonSelected.onClick.AddListener(OnSelectedClicked);
         buttonBuy.onClick.AddListener(OnBuyClicked);
+        UnityBase.DesignPattern.Observer.Instance.AddObserver("SelectSkin", OnSelectSkin);
     }
+    private void OnDestroy()
+    {
+        UnityBase.DesignPattern.Observer.Instance.RemoveObserver("SelectSkin", OnSelectSkin);
+    }
+    void OnSelectSkin(object data)
+    {
+        UpdateButtonState();
+    }    
     public void Init(SkinDataObject skinDataObject)
     {
         currentData = skinDataObject;
@@ -68,7 +77,7 @@ public class SkinSlot : MonoBehaviour
             DataManager.AddOwnedSkin(currentData.skinType);
             // Sau khi mua xong tự động chọn skin đó
             DataManager.SetSelectedSkin(currentData.skinType);
-
+            UnityBase.DesignPattern.Observer.Instance.Notify("SelectSkin");
             UpdateButtonState();
         }
         else
@@ -82,7 +91,7 @@ public class SkinSlot : MonoBehaviour
     {
         bool isOwned = DataManager.IsSkinOwned(currentData.skinType);
         bool isSelected = DataManager.GetSelectedSkin() == currentData.skinType;
-
+        buttonBuy.interactable = currentData.price <= DataManager.Coin;
         // Tắt hết trước
         buttonSelect.gameObject.SetActive(false);
         buttonSelected.gameObject.SetActive(false);

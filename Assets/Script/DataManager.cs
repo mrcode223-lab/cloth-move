@@ -67,7 +67,7 @@ public static class DataManager
     public static SkinType GetSelectedSkin()
     {
         if (!PlayerPrefs.HasKey(SelectedSkinKey))
-            return SkinType.Skin1;
+            return SkinType.None;
 
         return (SkinType)PlayerPrefs.GetInt(SelectedSkinKey);
     }
