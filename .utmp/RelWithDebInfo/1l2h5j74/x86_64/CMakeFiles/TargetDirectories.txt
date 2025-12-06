@@ -1,0 +1,5 @@
+D:/Project Unity/cloth-move/.utmp/RelWithDebInfo/1l2h5j74/x86_64/CMakeFiles/edit_cache.dir
+D:/Project Unity/cloth-move/.utmp/RelWithDebInfo/1l2h5j74/x86_64/CMakeFiles/rebuild_cache.dir
+D:/Project Unity/cloth-move/.utmp/RelWithDebInfo/1l2h5j74/x86_64/GameActivity/CMakeFiles/game.dir
+D:/Project Unity/cloth-move/.utmp/RelWithDebInfo/1l2h5j74/x86_64/GameActivity/CMakeFiles/edit_cache.dir
+D:/Project Unity/cloth-move/.utmp/RelWithDebInfo/1l2h5j74/x86_64/GameActivity/CMakeFiles/rebuild_cache.dir

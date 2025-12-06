@@ -29,7 +29,7 @@ namespace Obi
         // Single type of collision world. Each solver implementation should manage the data as it can.  
         private void GetOrCreateColliderWorld()
         {
-            colliderGrid = GameObject.FindObjectOfType<OniColliderWorld>();
+            colliderGrid = GameObject.FindAnyObjectByType<OniColliderWorld>();
             if (colliderGrid == null)
             {
                 var world = new GameObject("OniCollisionWorld", typeof(OniColliderWorld));

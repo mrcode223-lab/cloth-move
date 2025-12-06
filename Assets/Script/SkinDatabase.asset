@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53b9375d4c95e42b73a5522d55e1c9, type: 3}
+  m_Name: SkinDatabase
+  m_EditorClassIdentifier: 
+  skinDataObjects:
+  - skinType: 0
+    icon: {fileID: 21300000, guid: 8424388a8685a6b478e5253b30c0708c, type: 3}
+    skinObj: {fileID: 5045679639334515701, guid: 79e8e5d295391dc46bd68278411f52e4, type: 3}
+    price: 200
+  - skinType: 1
+    icon: {fileID: 21300000, guid: f7c239e5c4922ba48bee09e5ac008b9c, type: 3}
+    skinObj: {fileID: 7953905529604722970, guid: 9d2e0289ac8d21f4e9494d76ecda2b41, type: 3}
+    price: 300
+  - skinType: 2
+    icon: {fileID: 21300000, guid: ea2858ab0f0525144bcdf72ac865d5ba, type: 3}
+    skinObj: {fileID: 8668924090685345785, guid: 9815807af134cbd4eab5ed0517f16d67, type: 3}
+    price: 400
+  - skinType: 3
+    icon: {fileID: 21300000, guid: 4ea9a44a489caeb41bd5d80955ae36fe, type: 3}
+    skinObj: {fileID: 1760291343259849598, guid: 9d2862e9e0accbe49aec542fc3a90812, type: 3}
+    price: 600
+  - skinType: 4
+    icon: {fileID: 21300000, guid: 1f63bd4ef3902284bb861678ffd53816, type: 3}
+    skinObj: {fileID: 8559976358328903380, guid: f8ce3579d64886b4993d1f5d3eb11875, type: 3}
+    price: 700
+  - skinType: 5
+    icon: {fileID: 21300000, guid: 8c53cc23a3a2a1840a930e3caaa1d858, type: 3}
+    skinObj: {fileID: 4718508143885301595, guid: 157156643cc182e45a7e22377c342fd7, type: 3}
+    price: 800
+  - skinType: 6
+    icon: {fileID: 21300000, guid: a0fd04ac076e352478291b380203563e, type: 3}
+    skinObj: {fileID: 2034620763065378247, guid: 213356fdac7c490449b0b905c17308f2, type: 3}
+    price: 900
+  - skinType: 7
+    icon: {fileID: 21300000, guid: 25b0ddf82d0971d4793d2549bf1b5803, type: 3}
+    skinObj: {fileID: 8626131788519742104, guid: 422a7e48c5e6b2642a75ab3ea7b01159, type: 3}
+    price: 1000
+  - skinType: 8
+    icon: {fileID: 21300000, guid: 583e5aaceeb9f0c48bd13b7075a0fffb, type: 3}
+    skinObj: {fileID: 7616384001188877418, guid: 0f410eaa2cb43324c95879d8e52b0069, type: 3}
+    price: 1200
+  - skinType: 9
+    icon: {fileID: 21300000, guid: e3fb8c623d8090d4e988677525905e28, type: 3}
+    skinObj: {fileID: 616038170171180348, guid: 741f98fbfaa530c43aaf7d3607541c98, type: 3}
+    price: 1400
+  - skinType: 10
+    icon: {fileID: 21300000, guid: 581048ea4888a064ab85ee3c77b0ba59, type: 3}
+    skinObj: {fileID: 477502374861061633, guid: 474af724618e4764d95abcfe5c5dd950, type: 3}
+    price: 1600
+  - skinType: 11
+    icon: {fileID: 21300000, guid: 5e3849ef2da7efb4181010fb7fe4c878, type: 3}
+    skinObj: {fileID: 3005135055532118471, guid: 7f64927d4a37e284bb7bcc8955d4eeb6, type: 3}
+    price: 1800
+  - skinType: 12
+    icon: {fileID: 21300000, guid: dec645a12c95f7247840bbf132532c11, type: 3}
+    skinObj: {fileID: 4920814550678787690, guid: a544a55ac6ceebb4ca3317787eef4533, type: 3}
+    price: 2000
+  - skinType: 13
+    icon: {fileID: 21300000, guid: 2f605364be66914428416c4ee4a91c2a, type: 3}
+    skinObj: {fileID: 3036964769713451067, guid: 5fd1c17076624534a87b9d93de3de5a4, type: 3}
+    price: 2100
+  - skinType: 14
+    icon: {fileID: 21300000, guid: 9281f5bab805bfc48ab9280a6e780388, type: 3}
+    skinObj: {fileID: 3650683511537962144, guid: 42e223be3df65a341b2d3010604e1c72, type: 3}
+    price: 2200
