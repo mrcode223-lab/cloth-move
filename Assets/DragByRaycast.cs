@@ -58,7 +58,7 @@ public class DragByRaycast : MonoBehaviour
 
             selectedObj.position = new Vector3(targetPos.x, targetPos.y, selectedObj.position.z);
             selectedObj.GetComponent<Rigidbody>().isKinematic = true;
-
+            selectedObj.GetComponent<HandObject>().isDrag = true;
             var dist = Vector2.Distance(selectedObj.position, centerPoint.position);
             if (dist >= maxDistance)
             {

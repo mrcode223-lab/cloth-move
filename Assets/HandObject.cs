@@ -4,7 +4,7 @@ public class HandObject : MonoBehaviour
 {
     public LayerMask wallLayer;      // Layer Wall
     public float checkDistance = 0.2f; // Khoảng raycast kiểm tra
-
+    public bool isDrag = false;
     private Rigidbody rb;
 
     void Start()
@@ -17,6 +17,7 @@ public class HandObject : MonoBehaviour
     /// </summary>
     public void CheckAttachToWall()
     {
+        isDrag = false;
         // Hướng raycast — thường là hướng vào tường hoặc hướng -forward
         Vector3 dir = transform.forward;
         var hits = Physics.OverlapSphere(transform.position, 0.2f, wallLayer);
