@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] ParticleSystem winFx;
     [SerializeField] SimpleCloth cloth;
     [SerializeField] TextMeshProUGUI loseRewardTxt, winRewardTxt, coinTxt, levelTxt;
+    bool endGame = false;
     private void Awake()
     {
         Instance = this;
@@ -28,7 +29,8 @@ public class GameManager : MonoBehaviour
     }
     public void ShowLosePopup()
     {
-        if (winPopup.activeInHierarchy) return;
+        if (winPopup.activeInHierarchy && !endGame) return;
+        endGame = true;
         var reward = Random.Range(5, 10);
         loseRewardTxt.text = "+" + reward.ToString();
         DataManager.Coin += reward;
